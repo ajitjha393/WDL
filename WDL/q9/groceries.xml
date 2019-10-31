@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet type="text/xsl" href="./groceries.xsl" ?>
+
+<!DOCTYPE grocery [
+	<!ELEMENT grocery (item,quantity,price,brand)>
+	<!ELEMENT item (#PCDATA)>
+	<!ELEMENT quantity (#PCDATA)>
+	<!ELEMENT price (#PCDATA)>
+	<!ELEMENT brand (#PCDATA)>
+]>
+<groceriesStore>
+<grocery>
+	
+	<item>Item 1 </item>
+	<quantity> quantity 1 </quantity>
+	<price> price 1 </price>
+	<brand> brand 1 </brand>
+
+</grocery>
+
+
+<grocery>
+	
+	<item>Item 2 </item>
+	<quantity> quantity 2 </quantity>
+	<price> price 2 </price>
+	<brand> brand 2 </brand>
+
+</grocery>
+
+
+
+<grocery>
+	
+	<item>Item 3 </item>
+	<quantity> quantity 3 </quantity>
+	<price> price 3 </price>
+	<brand> brand 3 </brand>
+
+</grocery>
+
+
+
+<grocery>
+	
+	<item>Item 4 </item>
+	<quantity> quantity 4 </quantity>
+	<price> price 4 </price>
+	<brand> brand 4 </brand>
+
+</grocery>
+
+
+<grocery>
+	
+	<item>Item 5 </item>
+	<quantity> quantity 5 </quantity>
+	<price> price 5 </price>
+	<brand> brand 5 </brand>
+
+</grocery>
+
+
+</groceriesStore>
+
+
+

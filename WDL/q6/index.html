@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Hacking Game</title>
+	
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+
+		body{
+			box-sizing: border-box;
+		}
+
+		h1{
+			padding-top: 50px;
+			text-align: center;
+			text-decoration: underline;
+			color: purple;
+			padding-bottom: 20px;
+			font-size: 32px;
+		}
+		h2{
+			color: #eee;
+			padding-bottom: 10px;
+			padding-top: 10px;
+			margin-left: 8px;
+		}
+
+		.container{
+			
+			width: 400px;
+			margin: auto;
+			background: #222;
+			font-size: 15px;
+			padding: 20px;
+		}
+
+		.btn{
+			
+			color: #000;
+			background: white;
+			width: 150px;
+			padding: 5px;
+			margin-left: 100px;
+			margin-top: 40px;
+
+		}
+
+
+	</style>
+
+
+</head>
+<body>
+	
+	<h1>HACKING MINI GAME</h1>
+
+	<div class="container">
+		
+		<h2 id="attempt"> Remain Attempt = 5</h2>
+		<h2> Start Guessing : <input type='text' id='input-code'></h2>
+		<h2 id="hint-code">Sys Code :  </h2>
+		<input type="button" name="btn" value="Verify" class="btn">
+
+	</div>
+
+
+
+	<script type="text/javascript" src="./hack.js"></script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Calculator</title>
+
+	
+	<style type="text/css">
+	
+	*{
+		padding: 0;
+		margin: 0;
+	}
+
+	body{
+		font: 18px;
+		box-sizing: border-box;
+	}
+
+	.container{
+		
+		width: 300px;
+		height: 560px;
+		background: #a359b5;
+		margin: auto;
+		margin-top: 50px;
+
+	}
+
+	.ans-box{
+		
+		width: 250px;
+		margin: 15px;
+		padding: 12px;
+		font-size: 20px;
+	}
+
+	.btn{
+
+		width: 30px;
+		background: #e0c953; 
+		padding: 15px 32px;
+		margin: 15px;
+		text-align: center;
+		
+	}
+	.equal , .clear{
+
+		width: 110px;
+	}
+
+
+	</style>
+
+</head>
+<body>
+
+	<div class="container">
+		
+
+			<table>
+				
+				<input type="text" name="" class="ans-box">	
+				
+				<tr>
+					<td><input type="button" class="btn" name="" value="7" id="btn-7"></td>
+					<td><input type="button" class="btn" name="" value="8" id="btn-8"></td>
+					<td><input type="button" class="btn" name="" value="9" id="btn-9"></td>
+				</tr>
+
+
+				<tr>
+					<td><input type="button" class="btn" name="" value="4" id="btn-4"></td>
+					<td><input type="button" class="btn" name="" value="5" id="btn-5"></td>
+					<td><input type="button" class="btn" name="" value="6" id="btn-6"></td>
+				</tr>
+
+				<tr>
+					<td><input type="button" class="btn" name="" value="1" id="btn-1"></td>
+					<td><input type="button" class="btn" name="" value="2" id="btn-2"></td>
+					<td><input type="button" class="btn" name="" value="3" id="btn-3"></td>
+				</tr>
+
+				<tr>
+					<td><input type="button" class="btn" name="" value="0" id="btn-0"></td>
+					<td><input type="button" class="btn" name="" value="." id="btn-decimal"></td>
+					<td><input type="button" class="btn" name="" value="+" id="btn-add"></td>
+				</tr>
+
+
+				<tr>
+					<td><input type="button" class="btn" name="" value="-" id="btn-sub"></td>
+					<td><input type="button" class="btn" name="" value="*" id="btn-mul"></td>
+					<td><input type="button" class="btn" name="" value="/" id="btn-div"></td>
+				</tr>
+				
+
+			</table>
+				
+								
+				
+
+			<input type="button" class="btn equal" name="" value=" = " id="btn-equal">
+					
+			
+			<input type="button" class="btn clear" name="" value=" CLR " id="btn-clr">
+					
+
+
+	</div>
+	
+
+	<script type="text/javascript">
+		
+
+		let buttons = [
+
+			 document.querySelector("#btn-0"),
+			 document.querySelector("#btn-1"),
+			 document.querySelector("#btn-2"),
+			 document.querySelector("#btn-3"),
+			 document.querySelector("#btn-4"),
+			 document.querySelector("#btn-5"),
+			 document.querySelector("#btn-6"),
+			 document.querySelector("#btn-7"),
+			 document.querySelector("#btn-8"),
+			 document.querySelector("#btn-9"),
+			 document.querySelector("#btn-add"),
+			 document.querySelector("#btn-sub"),
+			 document.querySelector("#btn-mul"),
+			 document.querySelector("#btn-div"),
+			 document.querySelector("#btn-decimal"),
+			 document.querySelector("#btn-equal"),
+			document.querySelector("#btn-clr")
+			
+		];
+
+		let myExpresssion = "";
+
+	for(let i = 0 ;i < buttons.length  ; i++){
+		buttons[i].addEventListener('click',function(){
+			
+			if(i === buttons.length -1){
+				myExpresssion="";
+				document.querySelector(".ans-box").value = "";
+
+
+			}
+			else if(i === buttons.length -2){
+				document.querySelector(".ans-box").value = eval(myExpresssion);
+
+				myExpresssion= eval(myExpresssion);
+			}
+			else{
+				myExpresssion += buttons[i].value;
+				document.querySelector(".ans-box").value = myExpresssion;
+			}
+				
+		});
+	}	
+
+	
+	</script>
+		
+
+
+
+</body>
+</html>

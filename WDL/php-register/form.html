@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Register</title>
+<style type="text/css">
+
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	body{
+		box-sizing: border-box;
+		font-size: 20px;
+	}
+
+	div{
+		padding: 10px;
+	}
+
+	.container{
+		width: 340px;
+		margin: auto;
+		margin-top: 60px;
+		background: #15204d;
+		color: #fff;
+	}
+	input{
+		padding-right: 50px;
+		padding-top: 5px;
+		margin-right: 10px;
+	}
+
+	.btn{
+		text-align: center;
+		padding: 10px 20px; 
+		
+		margin-left: 100px;
+	}
+
+	.red-class{
+
+		font-size: 20px;
+		color: red;
+			}
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+
+	<div class="container">
+			
+		<form action="register.php" method="post" onsubmit="return validateForm()">	
+				
+			<div>
+				<label for="fname">
+					FirstName
+				</label><br>
+
+				<input type="text" name="fname" id="fname">
+			</div>
+
+
+			<div>
+				<label for="username">
+					Username
+				</label><br>
+
+				<input type="text" name="username" id="username">
+			</div>
+
+			<div>
+				<label for="password">
+					Password
+				</label><br>
+
+				<input type="password" name="password" id="password">
+			</div>
+
+		
+
+			<div>
+				<input type="radio" name="gender" value="male" id="male">Male
+				<input type="radio" name="gender" value="female" id="female">Female
+				<input type="radio" name="gender" value="others" id="others">Others
+
+
+			</div>
+
+			<div>
+				<label>Course  </label><br>
+				<select name="Courses" id="Courses">
+					<option value="C">C</option>
+					<option value="C++">C++</option>
+					<option value="python">python</option>
+
+				</select>
+
+			</div>
+
+			<div>
+				Hobbies <br>
+				Cricket <input type="checkbox" name="" value="cricket" id="cricket">
+				Chess <input type="checkbox" name="" value="chess" id="chess">
+
+			</div>
+			<br>
+			
+			<div>
+				<label>Tell me about yourself : </label> <br>
+				<textarea rows="4" cols="30" id="feedback" required>
+					
+				</textarea>
+
+			</div>
+
+			<div>
+				
+				<input type="submit" name="submit" value="Submit" class="btn">
+
+			</div>
+		</form>
+	</div>
+	
+	
+	<!-- <script src="./jquery-script.js"></script> -->
+
+	<!-- <script>
+	
+		function validateForm(){	
+		const fname = document.getElementById("fname").value;
+		const username = document.getElementById("username").value;
+		const password = document.getElementById("password").value;
+	
+		const courses = document.getElementById("Courses").value;
+		
+		const gender = [document.getElementById("male").checked,
+						document.getElementById("female").checked,
+						document.getElementById("others").checked
+						];
+
+		const hobbies = [document.getElementById("cricket").checked,
+					     document.getElementById("chess").checked
+						];
+
+		const feedback = document.getElementById("feedback").value;
+
+		 
+		if(!(/^[a-zA-Z]{3,}$/.test(fname))){
+
+			alert("FirstName must be alphabet characters and length >= 3 ");
+			return false;
+		}
+
+
+		if(!(/^[a-zA-Z]{1,}\d{1,}[a-zA-Z]*$/.test(username))){
+
+			alert("Username must start by an alphabet and must be  comb of alphnumeric letters ");
+			return false;
+		}
+
+
+		if(!(/^[a-zA-Z]{1,}\d{0,}@\d{0,}[a-zA-Z]{0,}\d*$/.test(password))){
+
+			alert("password must start by an alphabet and must be  comb of alphnumeric letters and special ymbol @");
+			return false;
+		}
+
+		if(!(gender[0] || gender[1] || gender[2])){
+
+			alert("Choose a gender");
+			return false;
+		}
+
+		if(!(hobbies[0] || hobbies[1])){
+			alert("Choose a hobby");
+			return false;	
+		}
+		
+
+
+		return false;
+
+	}
+
+	</script>
+	 -->
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery-Pract</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+	
+	<h1>abc</h1>
+<div>    <p>para-1</p>     <p>para-2</p>   </div>
+ <h1>xyz</h1>
+ <p> para-3</p> 
+
+
+	<script type="text/javascript">
+		
+		$(document).ready(function(){
+
+			$("div").find("p").css({"background" : "black", "color": "white"});
+
+		});
+
+	</script>
+</body>
+</html>
+
+<!-- find() it is used to find all descendants of selector  -->
+<!-- parent() direct parent of selector -->
+<!-- parents() find all ancestor of selector -->
+<!-- css("propertyname","value") setting css property -->
+
+<!-- DOM MANIPULATION -->
+<!-- 
+text() - Sets or returns the text content of selected elements
+html() - Sets or returns the content of selected elements (including HTML markup)
+val() - Sets or returns the value of form fields -->

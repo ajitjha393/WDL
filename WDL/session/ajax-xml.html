@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CD-COLLECTION</title>
+</head>
+<body>
+
+
+	<input type="button" name="" value="GET CD CATALOG" id="get-cd">
+	<div id="demo">
+		
+	</div>
+
+	<script type="text/javascript">
+		document.getElementById("get-cd").addEventListener('click',function(){
+
+
+				let xmlHttp = new XMLHttpRequest();
+				xmlHttp.onreadystatechange = function(){
+
+					if(this.readyState == 4 && this.status == 200){
+						loadXML(this.responseXML);
+					}
+
+				};
+
+				xmlHttp.open('GET','./q9/groceries.xml',true);
+				xmlHttp.send();
+
+		});
+
+		function loadXML(xmlDoc){
+
+			let table = `
+						<table>
+						<tr> 
+						<th> ITEM </th>
+						<th> QUANTITY </th>
+						<th> PRICE </th>
+ 
+						</tr>`;
+
+			let groceriesArray = xmlDoc.getElementsByTagName("grocery");
+			
+			for(let grocery = 0 ; grocery < groceriesArray.length ; grocery++){
+			
+				table += ` <tr> 
+
+					<td>
+
+					${groceriesArray[grocery].getElementsByTagName('item')[0].childNodes[0].nodeValue}
+					<td>
+
+
+					<td>
+
+					${groceriesArray[grocery].getElementsByTagName('quantity')[0].childNodes[0].nodeValue}
+					<td>
+
+
+					<td>
+
+					${groceriesArray[grocery].getElementsByTagName('price')[0].childNodes[0].nodeValue}
+					<td>
+
+					</tr>
+
+				`;
+
+
+			};
+
+			document.getElementById("demo").innerHTML = table + `</table>`;			
+
+		}
+	
+		
+
+	</script>
+
+
+</body>
+</html>

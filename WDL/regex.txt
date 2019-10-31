@@ -1,0 +1,51 @@
+literal regex = /abc/
+
+regex.test(string) // to check the pattern against string
+
+
+
+start with ---> /^abc/
+
+end with --> /abc$/
+
+0 or more ( * )  1 or more (+)
+
+character set [a-zA-Z]
+
+number set [0-9] or  \d
+
+[a-ZA-Z0-9_] or  \w
+
+? --> makes prefix optional (cody? it will match cod and cody)
+ 
+{1,3} --> specifies the length
+
+match = regex.exec(string)
+//returns the matching part of ()
+use grouping syntax
+
+example regex : /(\w+)\.mp3/g 
+
+
+
+for email
+regex = /^[a-zA-Z]{3,}\d+@[a-zA-Z]+.[a-zA-Z]{2,3}$/
+
+
+
+-----------------------------------------------
+1km = 0.62 miles
+
+1kg =  2.2pounds
+
+BMI = kg/m2 (weight/height**2);
+
+------------------------------------------
+
+oveflow: 
+
+visible --> extra part is not clipped
+hidden --> clipped
+scroll --> scrollbar is added
+auto ---> adds scroll when necessary
+
